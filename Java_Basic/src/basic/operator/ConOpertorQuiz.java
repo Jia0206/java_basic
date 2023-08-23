@@ -18,7 +18,12 @@ public class ConOpertorQuiz {
 		String result =( rn%2==0? "짝수입니다" :"홀수입니다");
 		System.out.println("3항 연산의 결과:" +result);
 		
+		//16~116난수
 		
+		int rn2 = (int)((Math.random()*101)+16);
+		System.out.println("발생한 난수 :" +rn2);
+		String result2 = (rn2%2 == 0? "짝수입니다":"홀수입니다");
+		System.out.println("3항 연산의 결과 : " +result2);
 		
 		
 		
