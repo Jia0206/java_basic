@@ -17,6 +17,14 @@ public class WhileQuiz02 {
         - while문을 if else 로 나눠서 두번 쓰는 것은 지양하겠습니다.
        */
 
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }

@@ -1,5 +1,7 @@
 package basic.ifquiz;
 
+import java.util.Scanner;
+
 public class IfQuiz03 {
 
 	public static void main(String[] args) {
@@ -12,7 +14,23 @@ public class IfQuiz03 {
          판별이 될 때마다 각각의 변수에 값을 넣어줍니다.
          마지막에 한번에 출력하시면 되겠습니다.
         */
-
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("세 정수의 최대값을 구합니다.");
+		
+		System.out.print("a의 값: ");
+		int a = sc.nextInt();
+		
+		System.out.print("b의 값: ");
+		int b = sc.nextInt();
+		
+		System.out.print("c의 값: ");
+		int c = sc.nextInt();
+		
+		int max = a;
+		
+		if (b>max);
+		
 	}
 
 }

@@ -1,5 +1,7 @@
 package basic.ifquiz;
 
+import java.util.Scanner;
+
 public class SwitchQuiz01 {
 
 	public static void main(String[] args) {
@@ -11,6 +13,15 @@ public class SwitchQuiz01 {
          연산자가 잘못 입력되었다면 연산자를 똑바로 입력하라고
          결과를 말씀해 주세요.
         */
+		
+		Scanner sc = new Scanner(System.in);
+		int i =sc.nextInt();
+		
+		
+		
+		
+		
+		
 		
 	}
 
