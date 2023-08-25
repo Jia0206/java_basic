@@ -19,14 +19,15 @@ public class IfQuiz02 {
 		System.out.println("입력한 값: ");
 		
 		
-		if(i%7==0) {
-			System.out.println("7의 배수입니다.");
-		}else if(i%7 !=0) {
-			System.out.println("7의 배수가 아닙니다.");
+		if(i ==0) {
+			System.out.println("0 입니다");
+		}else if(i%7 ==0) {
+			System.out.println("7의 배수가 입니다.");
 		}else {
-			System.out.println("0입니다.");
+			System.out.println("7의 배수가 아닙니다.");
 		}
 	
+		
 		
 		sc.close();
 		

@@ -27,9 +27,39 @@ public class IfQuiz03 {
 		System.out.print("c의 값: ");
 		int c = sc.nextInt();
 		
-		int max = a;
+		int max, mid, min;
 		
-		if (b>max);
+		if (a>b && a>c) {//num1이 max다!
+			max = a;
+			if(b>c) {
+				mid = b; min = c;
+			}else {
+				mid = c; min =b;
+			}
+			
+		}else if(b>a && b>c) {//b가 max다!
+			max = b;
+			if(a>c) {
+				mid =a; min = c;
+			}else {
+				mid=c; min=a;
+				
+			}
+		}else {//c가 max다!
+			max = c;
+			if(a>b) {
+				mid=a; min =b;
+			}else {
+				mid = b; min =a;
+			}
+		}
+		
+		System.out.println("------------------");
+		System.out.println("최대값: " + max);
+		System.out.println("중간값: " + mid);
+		System.out.println("최소값: " + min);
+		
+		
 		
 	}
 

@@ -15,14 +15,51 @@ public class SwitchQuiz01 {
         */
 		
 		Scanner sc = new Scanner(System.in);
-		int i =sc.nextInt();
+		System.out.print("정수 1: ");
+		int num1 =sc.nextInt();
 		
+		System.out.print("연산을 선택하세요. [+,-,*,/,]");
+		String operator = sc.next()
+;
+		System.out.print("정수2 :");
+		int num2 = sc.nextInt();
 		
+		int result = 0;
+		boolean flag = false;// 판단하기 위해 사용하는 코드
+							//flag라는 변수는 f/t의 값을 갖고 있다.
+							//flag의 기본값은 false로 되어 있음.
 		
+		switch(operator){
 		
+		case "+" :
+			result =num2 + num2;
+			break;
+		case "-" :
+			result =num2 - num2;
+			break;
+		case "*" :
+			result =num2 * num2;
+			break;
+		case "/" :
+			if(num2 == 0) {
+				System.out.println("연산할 수 없는 입력값 입니다.");
+				flag = true;
+				break;
+			}
+			result =num2 / num2;
+			break;
+			
+			default: 
+				System.out.println("연산 기호를 정확하게 입력하세요.");
+				System.out.println("[+,-,*,/,]");
+		}	
 		
-		
+		if(!flag){
+		System.out.printf("%d %s %d = %d\n" , num1, operator, num2, result);
+	
+		}
+		sc.close();
 		
 	}
-
+	
 }
