@@ -54,7 +54,7 @@ public class MethodExample2 {
 		return total;
 	}
 	
-	//가변인수 (가변 파라미터)를 사용한 매개변수 작성.
+	//가변인수(가변 파라미터)를 사용한 매개변수 작성.
 	//콤마로 나열되어 들어오는 여러 개의 값을 배열로 묶어서 내부로 전달합니다.
 	static int calcNumberTotal2(int... nums) {
 		//int ...변수로 하면 크기가 변하는 가변 변수로 선언
