@@ -18,13 +18,13 @@ public class ThrowsExample {
     
     
     static void greet(int idx) throws Exception {
-        System.out.println(greetings[idx]);
+        System.out.println(greetings[idx]);//(메소드 호출부)
     }
     
     public static void main(String[] args) {
         
         try {
-            greet(3);
+            greet(3);//(메소드 선언부)
         } catch (Exception e) {
             //printStackTrace() 메서드는 예외 발생 원인을 역추적하여
             //예외가 어디에서 발생했는지, 그 이유는 무엇인지를

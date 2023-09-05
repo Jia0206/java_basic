@@ -5,7 +5,7 @@ public class MainClass {
 	public static void main(String[] args) {
 		
 		//인터페이스는 객체를 생성할 수 없는 추상적인 개념이다.
-//		Inter i1 = new Inter();
+		//Inter i1 = new Inter();
 		
 		System.out.println("상수: " + Inter.num);
 		Inter.staticMethod(); // static 데이터 호출은 가능합니다.
@@ -26,7 +26,7 @@ public class MainClass {
     */
 	
 	Inter it1 = new ImplClass1(); // 다형성
-	it1.method1();
+	it1.method1();// 데이터 호출 가능
 	it1.parentMethod();
 	
 	//연산자의 우선순위
