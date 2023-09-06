@@ -29,7 +29,7 @@ public class DateExample {
 		
 		//현재 날짜와 시간 정보 얻기 (연.월,일,시,분,초)
 		LocalDateTime localDateTime = LocalDateTime.now();
-		System.err.println(localDateTime);
+		System.out.println(localDateTime);
 		
 		//특정 날짜와 시간 정보 얻기
 		LocalDateTime beginDate = LocalDateTime.of(2022, 7,1,9,0,0);
