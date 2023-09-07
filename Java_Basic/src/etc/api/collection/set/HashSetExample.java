@@ -77,7 +77,9 @@ public class HashSetExample {
 		//set을 list로 변환 -> 생성자의 매개값으로 set을 전달.
 		List<String> convertedList = new ArrayList<>(set);
 		System.out.println(convertedList);
-		
+		//*list로 변환하는 이유는 set는 할 수 없는 추가, 삭제 등등 하기위해서
+		//*set은 배열을 가질 수 없기 때문에 
+	
 		set.clear();
 		System.out.println(set);
 		
