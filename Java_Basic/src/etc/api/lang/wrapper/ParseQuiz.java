@@ -1,5 +1,7 @@
 package etc.api.lang.wrapper;
 
+import java.util.Scanner;
+
 public class ParseQuiz {
 
 	public static void main(String[] args) {
@@ -18,7 +20,77 @@ public class ParseQuiz {
 		입력값은 하이픈이 포함된 문자열이어야 합니다. 
 		하이픈이 포함되어 있지 않거나, 주민등록번호 뒷자리 첫번째 숫자가 1,2,3,4가 아닐 시에는 다시 입력받아야 합니다.
 		또한 하이픈을 제외한 값이 숫자가 아닐 시에도 다시 입력받아 주시면 됩니다.
-*/
+		 */
+		
+		/*
+		 -subString(begin,end) 
+		 문자열을 범위로 지정하여 추출 
+		 String ss1 = str.subString(1,5); //1번 이상 5번 미만 
+		 system.out.println();
+		 
+		 String ss2 = str.subString(6); //6번부터 끝까지 추출.
+		 system.out.println();
+		 
+		 */
+		
+			Scanner sc = new Scanner(System.in);
+			String ssn; 
+			char c;		// 또 사용할 것이라서 밖에서 선언을 먼저 하자
+			while(true) {
+				System.out.println("주민등록번호를 입력하세요(-포함)");
+				System.out.print(">");
+				ssn =sc.next();
+				//입력을 위한 반복문 (입력값이 올바른 가를 위한 것)
+				
+				if(ssn.indexOf("-")== -1) {
+					System.out.println("주민등록번호는 하이픈을 포함시켜 주세요");
+					continue;
+				}
+				if(ssn.length() !=14) {
+					System.out.println("올바른 주민등록번호 형태가 아닙니다.");
+					continue;
+				}
+				
+				 c = ssn.charAt(7);
+				if(!(c=='1' || c == '2' || c=='3' || c== '4')) {
+					System.out.println("뒷자리 첫번째 숫자는 1,2,3,4,중 하나여야 합니다.");
+					continue;
+				}
+				
+				try {
+					String test = ssn.substring(0,6);
+					String test2 = ssn.substring(7);
+					Integer.parseInt(test);
+					Integer.parseInt(test2);
+					break;
+					
+				} catch (NumberFormatException e) {
+					System.out.println("숫자로 정확하게 입력하셔야 합니다.");
+				}
+			
+			}
+			//921013-1223456
+			int year = Integer.parseInt(ssn.substring(0,2));
+			int month = Integer.parseInt(ssn.substring(2,4));
+			int day = Integer.parseInt(ssn.substring(4,6));
+			
+			String gender; int birthYear;
+			
+			if(c == '1'|| c == '3') {
+				gender ="남자";
+			}else {
+				gender = "여자";
+			}
+			
+			if(c =='1' || c=='2') {
+				birthYear = 1900 +year;
+			}else {
+				birthYear = 2000 +year;
+			}
+			
+			int age = 2023 - birthYear;
+			System.out.printf("%d년 %d월  %d일 %d세 %s\n", birthYear, month, day, age, gender);
+			sc.close();
 	}
 
 }

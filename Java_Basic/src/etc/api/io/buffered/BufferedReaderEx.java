@@ -26,7 +26,8 @@ public class BufferedReaderEx {
 			e.printStackTrace();
 		}finally {
 			try {
-				br.close();
+				br.close();// close로 마무리를 해야지만 한 코드가 되기 때문에 
+				// close는 무조건 마무리가 되는 코등!
 				fr.close();
 			
 			} catch (Exception e) {

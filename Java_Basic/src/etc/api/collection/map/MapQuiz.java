@@ -31,7 +31,6 @@ public class MapQuiz {
 		while(true) {
 			System.out.println("영단어: ");
 			String eng = sc.next();
-			
 			if(eng.equals("그만")) {
 				System.out.println("입력이 종료됩니다");
 				break;
@@ -46,9 +45,9 @@ public class MapQuiz {
 		}
 		
 		System.out.println("\n***오늘 등록한 단어***");
-		Set<String>engs = engKor.keySet();
+		Set<String>engs = engKor.keySet();// Map에서 key들만 추출하는 메서드
 		for(String s : engs) {
-			System.err.println(s+":"+engKor.get(s));
+			System.out.println(s+":"+engKor.get(s));
 		}
 		sc.close();
 	}

@@ -44,9 +44,10 @@ public class LottoSimulator {
               당첨번호들을 피해서 보너스번호 하나만 뽑아 주세요.
               범위는 마찬가지로 1 ~ 45 사이의 난수입니다.
          */
-        while(true) {
-            int bonus = r.nextInt(45) + 1;
+    	while(true) {
+    		int bonus = r.nextInt(45) + 1;//난수 설정
             if(!win.contains(bonus)) {
+            	// contains =객체 존재 유무 파악
                 return bonus;
             }
         }

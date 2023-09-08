@@ -25,13 +25,13 @@ public class BufferedWriterEx {
 		Scanner sc =new Scanner(System.in);
 		FileWriter fw= null;
 		BufferedWriter bw =null;
-		try {
+		try { // 예외발생할 가능성이 있는 문장 
 			fw = new FileWriter("c:/MyWork/hello.txt");
 			bw = new BufferedWriter(fw);
 			
 			System.out.print("첫 문장 : ");
 			String str1 =sc.nextLine();
-			System.out.print("두번쩨 문장 : ");
+			System.out.print("두번째 문장 : ");
 			String str2 =sc.nextLine();
 			
 			bw.write(str1 + "\r\n" +str2);
