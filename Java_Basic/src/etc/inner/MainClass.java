@@ -31,6 +31,10 @@ public class MainClass {
 		System.out.println(sub1.operate(100, 40));
 		
 		//곱셈 계산을 하는 계산기가 필요.
+		// 말 그대로 이름이 없는 클래스를 즉석에서 선언.
+		//선언한 클래스 내에서는 주소값을 통해 객체를 사용할 수 있지만 
+		//외부에서는 지목할 방법이 없기 때문에 객체 사용이 불가능 
+		
 		Calculator multiCal = new Calculator() {
 			//인터페이스(Calculator)는 클래스를 꼭 함께 해야지만 가능 
 			//multiCal만 변수생성가능
@@ -51,6 +55,21 @@ public class MainClass {
 			
 			Calculator divCal = (n1,n2) -> n1/n2;
 			System.out.println(divCal.operate(25, 5));
+			
+			Pet dog= new Pet() {
+				
+				@Override
+				public void play() {
+					System.out.println("강아지는 마당에서 놀아요~");
+					
+				}
+				
+				@Override
+				public void eat() {
+					System.out.println("강아지는 사료를 먹어요~!");
+					
+				}
+			};
 		
 		/*
 		 * Calculator divCal = (n1,n2) -> n1/n2;는 
